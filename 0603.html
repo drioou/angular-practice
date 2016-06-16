@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <script src="angular.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>? -->
+    <style>
+
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <my-directive></my-directive>
+    <script>
+    var app = angular.module("myApp", []);
+    app.directive("my-directive", function() {
+        return {
+            template: "<h1>custom instruction</h1>"
+        }
+    })
+    </script>
+    <!--  <div ng-app="myApp">
+        
+    
+    <runoob-directive></runoob-directive>
+    </div>
+    <script>
+    var app = angular.module("myApp", []);
+    app.directive("runoobDirective", function() {
+        return {
+            template: "<h1>自定义指令!</h1>"
+        };
+    });
+    </script> -->
+    <!-- <ul ng-controller="PhoneListControl">jjjjjjjj
+        <li ng-repeat="phone in phones">
+            <span>{{phone.name}}</span>
+            <p>{{phone.snippet}}</p>
+        </li>
+    </ul> -->
+    <!-- <div ng-app='myApp' ng-controller="myCtrl" data-ng-init="firstName= 'John'">
+        <input type="text" ng-model="firstName">
+        <input type="text" ng-model="lastName">
+        <p>Your name : {{firstName + "" + lastName}}</p>
+        <p>nema:<span data-ng-bind="firstName"></span></p>
+        <p>my first expression:{{5+5}}</p>
+        <div ng-init=" quantity=0.1;cost=0.2 ">
+            <p>totle price:{{quantity+cost}}</p>
+            <p>another price <span ng-bind="quantity+cost"></span></p>
+        </div>
+        <div ng-init="points=[1,2,3,4]">
+            <p> the third one {{points[2]}}</p>
+        </div>
+        <div ng-init="names=['a','b','c']">
+            <p>use ng-repeat to do array</p>
+            <ul>
+                <li ng-repeat="x in names">{{ x }}</li>
+            </ul>
+        </div>
+        <my-directive></my-directive>
+    </div>
+    <div ng-app='myApp1'>
+        <p>my first expression:{{ 5+5 }}</p>
+    </div> -->
+    <!--  <script>
+    var app1 = angular.module('myApp1', []);
+    </script> -->
+    <script>
+    // var app = angular.module('myApp', []);
+    // // var app = angular.module('myApp1', []);
+    // app.directive("my-directive", function() {
+    //     return {
+    //         template: "<h1>自定义指令!</h1>"
+    //     };
+    // });
+    // app.controller('myCtrl', function($scope) {
+    //         $scope.firstName = 'John';
+    //         $scope.lastName = 'Doe';
+    //     })
+    // var MyController = angular.module('MyController', []);
+    // MyController.controller('')
+
+    // function MyController($scope) {
+    //     $scope.author = {
+    //         'name': 'Naim',
+    //         'title': 'MR',
+    //         'company': 'Naimos'
+    //     }
+    // }
+    // <!-- <h2>Total todos:{{totalTodos}}</h2>
+    //     <ul class="unstyled">
+    //         <li ng-repet="todo in todos">
+    //             <input type="checkbox" ng-model="todo.done">
+    //             <span class="done-{{todo.done}}">{{todo.text}}</span>
+    //         </li>
+    //     </ul> -->
+    // <!--  <div ng-controller="MyController">
+    //     <input type="text" ng-model="person.name" placeholder="Your name">
+    //     <h1>hello{{person.name}}</h1>
+    // </div>
+    // <div ng-controller="MyController">
+    //     <h1> {{author.name}}</h1>
+    //     <p> {{author.title + ', ' + author.company}}</p>
+    // </div> -->
+    </script>
+</body>
+<script type="text/javascript">
+// function MyController($scope, $timeout) {
+//     var updateClock = function() {
+//         $scope.clock = new Date();
+//         $timeout(function() {
+//             updateClock();
+//         }, 1000);
+//     }
+//     updateClock();
+// }
+
+
+// function  TodoCtrl($scope){
+//  $scope.totalTodos = 4 ;
+//  $scope.todos = [
+//      {
+//          text:'learn AngularJS',
+//          done:false
+//      },
+//      {text:'Build an app',
+//          done:false
+//      }
+//  ]
+// }
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<!--test1 2016年6月7日10:12:35 -->
+	<!-- <div ng-controller="formCtrl">
+		<form novalidate>  --> <!-- novalidate当提交表单时不对表单数据（输入）进行验证 -->
+			<!-- First Name:<br>
+			<input type="text" ng-model="user.firstName" name="">
+			<br>
+			Last Name:<br>
+			<input type="text" ng-model="user.lastName" name="">
+			<br><br>
+			<button type="" ng-click="reset()">reset</button>
+		</form>
+		<p>form={{user}}</p>
+		<p>master={{master}}</p>
+		
+	</div> -->
+<!-- 2016年6月7日10:12:49	 -->
+
+<!-- test2 -->
+	<div >
+		<form ng-model="validateCtrl" name="myForm" novalidate>
+			<p>userName:<br></p>
+			<input type="text" name="user" ng-model="user" required name="user">
+			<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid"></span>
+			<span ng-show = "myForm.user.$error.required">must be have username</span>
+		</form>
+		
+	</div>
+
+<!-- test2 -->
+
+</body>
+<script src="angular.js"></script>
+<script>
+	var app = angular.module('app',[]);
+	app.controller('formCtrl',function($scope){
+		$scope.master = {firstName:'John',lastName:'doe'};
+		$scope.reset = function(){
+			$scope.user = angular.copy($scope.master);
+		}
+		$scope.reset();
+	})
+</script>
+</html>

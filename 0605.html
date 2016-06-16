@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href=""><script type="text/javascript" src="angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css" media="screen">
+		input.ng-invalid{
+			border:3px solid #ccc;
+		}
+	</style>
+</head>
+<body >
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		name:<input type="" ng-model="name" name="">
+	</div> -->
+	<form action=""  name="myForm" method="">
+		Email:
+		<input type="email" name="myAddress" ng-model="text">
+		<span ng-show="myForm.myAddress.$error.email">not legal address</span>
+	</form>
+	<form action="" name="myForm" ng-init = "myText = 'test@test.com'">
+		Email:
+		<input type="email" name="myAddress" ng-model = "myText" required>
+		<h1>状态</h1>
+		{{myForm.myAddress.$valid}}
+		{{myForm.myAddress.$dirty}}
+		{{myForm.myAddress.$touched}}
+		
+	</form>
+	<div  ng-controller="ctrlName">
+		<h1>{{lastname}}family</h1>
+		<!-- <ul>
+			<li ng-repeat='x in names'>{{x}}</li>
+		</ul> -->
+		<!-- <select name="" ng-model="selectedName" ng-options = "x for x in names" >
+			请选择名字
+		</select> -->
+		<select name="">
+			<option value="" ng-repeat="x in names">{{x}}</option>
+			
+		</select>
+		<div ng-init="mySwitch=true">
+			<p><button ng-disabled="mySwitch">click me</button></p>
+			<p><input type="checkbox" ng-model="mySwitch" name=""></p>
+		</div>
+		<p>{{mySwitch}}</p>
+		<div ng-controller="click">
+			<button type="" ng-click="count = count +1" >click me</button>
+			<p>{{count}}</p>
+		</div>
+
+		
+	</div>
+	<script>
+		var app = angular.module('myApp',[])
+		app.controller('myCtrl', function($scope){
+			$scope.name = 'Jhon Doe'
+		})
+		app.controller('ctrlName',function($scope,$rootScope){
+			$scope.names = ['1','2','3'];
+			$rootScope.lastname="duanyong";
+		})
+		app.controller('click',function($scope){
+			$scope.count =0 
+		})
+	</script>
+</body>
+
+
+</html>

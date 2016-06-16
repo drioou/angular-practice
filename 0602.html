@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>angular</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<script src="angular.js"></script>
+
+</head>
+<body>
+	<div class="container">
+	 Hello {{'World'}}!
+	 Your name:<input type="text" name="" ng-model="yourname" placeholder="World">
+	 <hr>
+	 Hello{{yourname || 'world'}}!
+	 <hr>
+	 
+	 <p>1+2 = {{1+2}}</p>
+	 <hr>
+	 <input type="text" ng-model="b"><br>
+	 <input type="text" ng-model="b">
+	<hr>
+	<input type="text" ng-model="a">
+	<div>{{a}}</div>
+	<div ng-bind='a'></div>
+	</div>	
+</body>
+	
+</html>
